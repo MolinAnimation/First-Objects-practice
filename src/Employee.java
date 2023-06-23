@@ -7,6 +7,12 @@ public class Employee extends Person {
     private Map<String, String> schedule;
     private Map<String, String> jobs;
 
+    public Employee(String id, String name, String job, String employeId) {
+        super(id, name);
+        this.job = job;
+        this.employeeId = employeId;
+    }
+
     public double getSalary() {
         return this.salary;
     }

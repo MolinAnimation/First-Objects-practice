@@ -1,7 +1,13 @@
 public class Client extends Person {
-    String accountId;
-    String accountType;
-    double balance;
+    private String accountId;
+    private String accountType;
+    private double balance = 0;
+
+    public Client(String id, String name, String accountId, String accountType) {
+        super(id, name);
+        this.accountId = accountId;
+        this.accountType = accountType;
+    }
 
     public String getAccountId() {
         return this.accountId;
@@ -46,6 +52,10 @@ public class Client extends Person {
 
         }
         return succesful;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
 }
